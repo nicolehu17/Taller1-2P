@@ -1,0 +1,21 @@
+body {
+  padding-top: 20px;
+}
+
+header, footer {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.content {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+}
