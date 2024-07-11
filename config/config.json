@@ -2,9 +2,9 @@
   "development": {
     "username": "root",
     "password": "12345",
-    "database": "Prueba_Daw",
+    "database": "Prueba",
     "host": "127.0.0.1",
-    "dialect": "mariadb"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
