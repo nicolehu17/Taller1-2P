@@ -1,25 +1,22 @@
 'use strict';
-const Foto = require('../models').foto;
-const Etiqueta = require('../models').etiqueta;
+const { Model } = require('sequelize');
 
-const {
-  Model
-} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class etiqueta extends Model {
-    
+  class Etiqueta extends Model {
     static associate(models) {
-      // define association here
-      models.etiqueta.belongsToMany(models.foto, { through: 'fotoetiquetas',
-      foreignKey: "etiqueta_id" });
-      }
+      // Define association here
+      Etiqueta.belongsToMany(models.Foto, { 
+        through: 'fotoetiquetas', 
+        foreignKey: 'etiqueta_id' 
+      });
+    }
   }
-  etiqueta.init({
+  Etiqueta.init({
     texto: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'etiqueta',
+    modelName: 'Etiqueta',
     tableName: 'etiquetas'
   });
-  return etiqueta;
+  return Etiqueta;
 };
